@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT UI Plus",
+    "version": "0.0.1",
+    "description": "Adds all sorts of improvements to the chatgpt interface, for example: formatting via LaTeX (chatgpt uses it), formatting tables, creating LaTeX code and tables, and more!",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://chatgpt.com/*"],
+        "js": ["main.js", "jquery-3.6.0.min.js", "mathquill/mathquill.js"],
+        "css": ["mathquill/mathquill.css"]
+      }
+    ],
+    "web_accessible_resources": [
+    {
+      "resources": [
+        "mathquill/mathquill.js",
+        "mathquill/mathquill.css",
+        "mathquill/font/Symbola.woff2",
+        "mathquill/font/Symbola.woff",
+        "mathquill/font/Symbola.ttf",
+        "mathquill/font/Symbola.otf",
+        "jquery-3.6.0.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+  }
+  
